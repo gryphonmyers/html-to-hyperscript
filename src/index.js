@@ -132,7 +132,7 @@ let htmlToHs2 = curry((opts, html) => {
     }
 
     if (text) {
-      return space + '`' + text + '`'
+      return space + '\"' + text + '\"'
     } else {
       return ""
     }
