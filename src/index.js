@@ -132,7 +132,7 @@ let htmlToHs2 = curry((opts, html) => {
     }
 
     if (text) {
-      return space + '\"' + JSON.stringify(text) + '\"'
+      return space + JSON.stringify(text)
     } else {
       return ""
     }
