@@ -49,8 +49,8 @@ let normalizeAttrs = function (attrs) {
   let className = (findName("class", attrs) || findName("classname", attrs) || {}).value
   let htmlFor = (findName("for", attrs) || findName("htmlfor", attrs) || {}).value
   return pipe(
-    className ? addName("className", className) : identity,
-    htmlFor   ? addName("htmlFor", htmlFor)     : identity
+    className ? addName("class", className) : identity,
+    htmlFor   ? addName("for", htmlFor)     : identity
   )(rejectNames(["class", "classname", "for", "htmlfor"], attrs))
 }
 
